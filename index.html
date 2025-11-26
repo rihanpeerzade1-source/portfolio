@@ -81,6 +81,24 @@
       aside{display:flex;flex-direction:column;align-items:center;text-align:center}
       main{padding-top:6px}
     }
+    /* Mobile-specific improvements */
+    @media (max-width:600px){
+      body{padding:18px}
+      .card{border-radius:12px;box-shadow:0 8px 20px rgba(16,24,40,0.18)}
+      aside{padding:16px}
+      .photo-wrap{width:96px;height:96px;border-width:4px;margin-bottom:10px}
+      h1.name{font-size:18px}
+      p.role{font-size:13px}
+      .left-title{font-size:13px}
+      ul.list li{font-size:13px}
+      main{padding:18px}
+      .cta{flex-direction:column}
+      .btn{width:100%;padding:12px;border-radius:10px;text-align:center}
+      .btn.secondary{order:2}
+      .projects{grid-template-columns:1fr}
+      .project{padding:10px}
+      .tags{gap:6px}
+    }
   </style>
 </head>
 <body>

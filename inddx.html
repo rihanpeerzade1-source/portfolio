@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Md. Rihan Peerzade — Portfolio</title>
+  <link rel="icon" href="data:,">
+  <style>
+    :root{
+      --accent:#6a11cb;
+      --accent-2:#2575fc;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --glass: rgba(255,255,255,0.85);
+      --shadow: 0 12px 30px rgba(22,23,26,0.25);
+      --radius:14px;
+      --max-width:1100px;
+      --gap:20px;
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      padding:40px 20px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:linear-gradient(135deg,var(--accent),var(--accent-2));
+      -webkit-font-smoothing:antialiased;color:#0b1220;
+    }
+    .card{
+      width:100%;
+      max-width:var(--max-width);
+      background:linear-gradient(180deg, rgba(255,255,255,0.9), rgba(246,249,255,0.95));
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      display:grid;
+      grid-template-columns:320px 1fr;
+      overflow:hidden;
+    }
+    /* Sidebar */
+    aside{padding:28px;background:linear-gradient(180deg,#fbfdff,#f3f7ff)}
+    .photo-wrap{width:160px;height:160px;border-radius:50%;overflow:hidden;margin:0 auto 18px;border:6px solid rgba(106,17,203,0.12);display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--accent),var(--accent-2));}
+    .photo-wrap img{width:100%;height:100%;object-fit:cover;display:block}
+    /* Move the image slightly down and to the left inside the circular frame.
+       Tweak the X% Y% values if you want it more/less shifted. */
+    #profileImg{
+      object-position:40% 62%;
+      transition:transform .18s ease, opacity .15s ease;
+    }
+    .initials{width:100%;height:100%;display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:40px}
+    h1.name{font-size:20px;text-align:center;margin:6px 0 2px}
+    p.role{text-align:center;color:var(--muted);margin:0 0 14px}
+    .contact{margin-top:8px}
+    .contact p{font-size:14px;color:#213547;margin:6px 0}
+    .left-title{font-weight:600;color:#1f2937;margin-top:18px;margin-bottom:8px}
+    ul.list{padding-left:0;list-style:none;margin:0}
+    ul.list li{padding:6px 0;color:#254050;font-size:14px}
+    .tags{display:flex;flex-wrap:wrap;gap:8px}
+    .tag{background:rgba(98,102,241,0.12);color:#1f2540;padding:6px 10px;border-radius:999px;font-size:13px}
+
+    /* Main content */
+    main{padding:28px}
+    .row{display:flex;gap:var(--gap);align-items:flex-start}
+    .section{margin-bottom:18px}
+    .section h2{font-size:16px;color:#0f1724;margin:0 0 8px;border-bottom:3px solid transparent;display:inline-block;padding-bottom:6px}
+    p,li{color:#243445;line-height:1.5}
+    .about p{margin:0}
+    .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+    .project{background:var(--glass);padding:12px;border-radius:10px;border:1px solid rgba(15,23,42,0.04)}
+    .project h3{margin:0 0 6px;font-size:15px}
+    .project p{margin:0;font-size:13px;color:var(--muted)}
+    .cta{display:flex;gap:10px;margin-top:12px}
+    .btn{background:var(--accent);color:white;padding:9px 14px;border-radius:10px;text-decoration:none;font-weight:600;font-size:14px}
+    .btn.secondary{background:transparent;color:var(--accent);border:1px solid rgba(106,17,203,0.12)}
+
+    /* Responsive */
+    @media (max-width:880px){
+      .card{grid-template-columns:1fr;}
+      aside{display:flex;flex-direction:column;align-items:center;text-align:center}
+      main{padding-top:6px}
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <aside>
+      <div class="photo-wrap">
+        <div class="initials" id="initials" style="display:none">RP</div>
+        <img id="profileImg" src="rihan-photo.jpg" alt="Md. Rihan Peerzade" onerror="this.style.display='none';document.getElementById('initials').style.display='flex'">
+      </div>
+      <h1 class="name">Md. Rihan Peerzade</h1>
+      <p class="role">Web Developer • BCA student</p>
+
+      <div class="contact">
+        <div class="left-title">Contact</div>
+        <p>📞 <a href="tel:+919380049123" style="color:inherit;text-decoration:none">+91 93800 49123</a></p>
+        <p>✉️ <a href="mailto:rihanpeerzade1@gmail.com" style="color:inherit;text-decoration:none">rihanpeerzade1@gmail.com</a></p>
+        <p>📍 Kudachi, Karnataka</p>
+      </div>
+
+      <div>
+        <div class="left-title">Skills</div>
+        <ul class="list">
+          <li>HTML & CSS — responsive pages</li>
+          <li>Java — fundamentals and problem solving</li>
+          <li>Canva Pro — visual design</li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="left-title">Languages</div>
+        <ul class="list">
+          <li>English</li>
+          <li>Hindi</li>
+          <li>Kannada</li>
+        </ul>
+      </div>
+
+      <div style="margin-top:12px">
+        <div class="left-title">Tech Tags</div>
+        <div class="tags">
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">Java</span>
+          <span class="tag">Canva</span>
+        </div>
+      </div>
+    </aside>
+
+    <main>
+      <div class="section about">
+        <h2>About Me</h2>
+        <p>
+          I'm a passionate Web Developer from Kudachi, currently pursuing a BCA at S.V.E.S BR. Darur First Grade College, Harugeri. I build simple, responsive websites and create visual designs using Canva Pro. I'm learning more about Java and modern web development and I'm looking for opportunities to contribute to real projects.
+        </p>
+        <div class="cta">
+          <a class="btn" href="mailto:rihanpeerzade1@gmail.com">Hire / Contact</a>
+          <a class="btn secondary" href="rihan-cv.pdf" download>Download CV</a>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Projects</h2>
+        <div class="projects">
+          <div class="project">
+            <h3>Portfolio Landing</h3>
+            <p>Responsive personal portfolio built with plain HTML and CSS.</p>
+          </div>
+          <div class="project">
+            <h3>Student Management UI</h3>
+            <p>UI prototype for managing student info and attendance.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Education</h2>
+        <ul class="list">
+          <li>BCA — S.V.E.S BR. Darur First Grade College, Harugeri (ongoing)</li>
+          <li>Higher Secondary — [Your School Name]</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>More</h2>
+        <p>I'm open to internships and freelance work. I enjoy learning new technologies and improving my craft. Feel free to reach out — I'm happy to collaborate.</p>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    // set initials from name if image missing
+    (function(){
+      var initialsEl = document.getElementById('initials');
+      if(!initialsEl) return;
+      var name = 'Md. Rihan Peerzade'.trim();
+      var parts = name.split(' ');
+      var initials = (parts[0] ? parts[0][0] : '') + (parts[parts.length-1] ? parts[parts.length-1][0] : '');
+      initialsEl.textContent = initials.toUpperCase();
+    })();
+  </script>
+</body>
+</html>
